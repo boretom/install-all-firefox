@@ -100,28 +100,16 @@ It'll take a little while to grab the `.dmg` files, but it should only need to d
 
 ---
 
-### Checklist when adding a new version
-New versions DMGs are fetched from Mozilla, the only thing is to generating a new `fx[version].png` in the `bits` directory.
-
-1. Generate a new version icon:
+### Prerequisite Software
 
 ```bash
-cd bits
-./create_firefox_image_with_version "80.0" fx80.png
-```
-
-`create_firefox_image_with_version` uses ImageMagick's `convert` utility to composite the two base images together with text, so make sure you've got that installed first:
-
-```bash
-$ brew install imagemagick gs
+$ brew install imagemagick gs fileicon
 ```
 
 ---
 ## CREDITS
 - [Original script from omgmog](https://github.com/omgmog/install-all-firefox)
-- [setfileicon](http://maxao.free.fr/telechargements/setfileicon.m) is a utility created by Damien Bobillot (damien.bobillot.2002_setfileicon@m4x.org) http://maxao.free.fr/telechargements/setfileicon.gz
 - [Firebug](http://getfirebug.com/)
 - Thanks to the community for using/reporting issues/making suggestions for features!
 - Thanks to Lurst for his [`create_firefox_image_with_version`](https://github.com/LuRsT/create_firefox_image_with_version) tool.
-- [osxiconutils (replacment for setfileicon)](https://github.com/sveinbjornt/osxiconutils)
 - [fileicon (another replacment for setfileicon)](https://github.com/mklement0/fileicon)
