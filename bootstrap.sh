@@ -2,8 +2,15 @@
 
 readonly PROGNAME=$(basename $0)
 
+default_github_user=boretom
+if [[ "${GITHUB_USER}x" == "x" ]]; then
+    echo -e "GITHUB_USER environment variable not set. Use default user '${default_github_user}'"
+    GITHUB_USER=$default_github_user
+fi
+echo -e "Use ${GITHUB_USER}'s github repository as source"
+
 main () {
-    local remote_dir="https://raw.githubusercontent.com/boretom/install-all-firefox/master/"
+    local remote_dir="https://raw.githubusercontent.com/${GITHUB_USER}/install-all-firefox/master/"
     local script_name="firefoxes.sh"
     local temp_dir="/tmp/"
     local remote_script="${remote_dir}${script_name}"
