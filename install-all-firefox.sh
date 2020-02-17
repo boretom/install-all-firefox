@@ -1,4 +1,12 @@
 #!/bin/bash +x
+
+default_github_user=boretom
+if [[ "${GITHUB_USER}x" == "x" ]]; then
+    echo -e "GITHUB_USER environment variable not set. Use default user '${default_github_user}'."
+    GITHUB_USER=$default_github_user
+fi
+echo -e "Use ${GITHUB_USER}'s github repository as source"
+
 # purpose: install multiple versions of Firefox on Mac
 #
 
@@ -65,7 +73,7 @@ versions_usage_point_four_up="47 48"
 
 default_versions=""
 tmp_directory="/tmp/firefoxes/"
-bits_host="https://raw.githubusercontent.com/boretom/install-all-firefox/master/bits/"
+bits_host="https://raw.githubusercontent.com/${GITHUB_USER}/install-all-firefox/master/bits/"
 bits_directory="${tmp_directory}bits/"
 dmg_host="http://ftp.mozilla.org/pub/mozilla.org/firefox/"
 

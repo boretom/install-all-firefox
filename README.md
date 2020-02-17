@@ -83,7 +83,16 @@ If you want to install to a different directory, pass that as the last option. I
 $ ./firefoxes.sh "all" "en-GB" "no_prompt" "/Users/myhomedir/Applications/"
 ```
 
+### Set different github user repository
+
+The default github user is set to 'boretom'. If you want to modify the scripts yourself and run it from your github account, set GITHUB_USER to your own username.
+
+```bash
+$ GITHUB_USER=fluffy ./firefoxes.sh status
+```
+
 ---
+
 ## INSTALLATION
 
 From a terminal prompt, enter the following:
